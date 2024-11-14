@@ -66,13 +66,13 @@ const IndexDesktop: React.FC = () => {
 
           <p className="font-neue-plak text-[12px] leading-tight max-w-sm mb-3">
             Advanced tech, superior comfort, and all <br />
-            performance is what our latest UA gear <br />
-            is all about. Built to go further, push hard, <br />
-            and break your boundaries.
+            performance is what our latest UA gear is all <br />
+            about. Built to go further, push hard, and break <br />
+            your boundaries.
           </p>
 
           <button
-            className="bg-black text-white py-2 px-8
+            className=" font-neue-plak-regular text-[14px] bg-black text-white py-2 px-8
            w-half text-center font-semibold sharp hover:bg-gray-800 transition"
           >
             Shop UA New Arrivals
@@ -128,12 +128,12 @@ const IndexDesktop: React.FC = () => {
             <span>OF STRONG</span>
           </h1>
 
-          <p className="font-neue-plak text-[14px] leading-tight max-w-sm mb-6">
+          <p className="font-neue-plak text-[14px] leading-relaxed max-w-sm mb-6">
             The Underground collection is inspired by the idea of a Project Rock
             fight club. A place where we push each other harder to make each
             other stronger. A drop dedicated to you and your crew. The neon
             colourways are a reflection of the energy we bring to every rep,
-            every set and every challenge.
+            every set, and every challenge.
           </p>
 
           <button className="bg-transparent border border-white text-white font-neue-plak text-[16px] py-2 px-12 text-center font-semibold hover:bg-white hover:text-black transition">
