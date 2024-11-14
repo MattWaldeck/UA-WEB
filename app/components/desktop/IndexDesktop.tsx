@@ -55,7 +55,7 @@ const IndexDesktop: React.FC = () => {
           style={{ marginLeft: '-50px', paddingLeft: '1px' }}
         >
           <h1 className="font-neue-plak font-black text-[50px] leading-[1]  mb-2">
-            <span>CHECK</span>
+            <span>CHECKin</span>
             <br />
             <span>OUT OUR</span>
             <br />
