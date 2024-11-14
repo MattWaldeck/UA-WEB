@@ -88,7 +88,7 @@ const IndexDesktop: React.FC = () => {
         >
           <source src="/assets/videos/UA_Theme_1_DT.mp4" type="video/mp4" />
         </video>
-        <div className="absolute top-1 right-5 w-[40%] h-full flex flex-col justify-center items-start space-y-2 px-6">
+        <div className="absolute top-1 right-[-5%] w-[50%] h-full flex flex-col justify-center items-start space-y-2 px-4">
           <h1 className="font-neue-plak font-black text-[50px] leading-[1] mb-2">
             CHECK <br />
             OUT OUR <br />
