@@ -35,10 +35,49 @@ const instagramImages: InstagramItem[] = [
   '/assets/images/IG Image 5_DT.jpg',
 ];
 
+// Reusable Category Card Component
+const CategoryCard: React.FC<Category> = ({ name, img }) => (
+  <div className="relative">
+    <img
+      src={img}
+      alt={name}
+      className="w-full h-auto shadow-lg object-cover"
+    />
+    <Link
+      to={`/${name.toLowerCase()}`}
+      className="block mt-2 text-black font-neue-plak font-semibold text-[14px] hover:underline"
+    >
+      Shop Now
+    </Link>
+  </div>
+);
+
+// Reusable Promo Card Component
+const PromoCard: React.FC<{ img: string }> = ({ img }) => (
+  <div className="relative">
+    <img
+      src={img}
+      alt="Promotion"
+      className="w-full h-auto shadow-lg object-cover"
+    />
+  </div>
+);
+
+// Reusable Instagram Card Component
+const InstagramCard: React.FC<{ img: string }> = ({ img }) => (
+  <div className="relative overflow-hidden">
+    <img
+      src={img}
+      alt="Instagram"
+      className="w-full h-full object-contain shadow-lg"
+    />
+  </div>
+);
+
 const IndexDesktop: React.FC = () => {
   return (
     <div className="bg-gray-100 text-black font-neue-plak">
-      {/* Section 1 */}
+      {/* Section 1: Video Header */}
       <section className="relative w-full mb-14">
         <video
           autoPlay
@@ -49,64 +88,38 @@ const IndexDesktop: React.FC = () => {
         >
           <source src="/assets/videos/UA_Theme_1_DT.mp4" type="video/mp4" />
         </video>
-
-        <div
-          className="absolute top-1 right-5 w-[40%] h-full flex flex-col justify-center items-start space-y-2 px-6"
-          style={{ marginLeft: '-50px', paddingLeft: '1px' }}
-        >
-          <h1 className="font-neue-plak font-black text-[50px] leading-[1]  mb-2">
-            <span>CHECK</span>
-            <br />
-            <span>OUT OUR</span>
-            <br />
-            <span>LATEST</span>
-            <br />
-            <span>GEAR</span>
+        <div className="absolute top-1 right-5 w-[40%] h-full flex flex-col justify-center items-start space-y-2 px-6">
+          <h1 className="font-neue-plak font-black text-[50px] leading-[1] mb-2">
+            CHECK <br />
+            OUT OUR <br />
+            LATEST <br />
+            GEAR
           </h1>
-
-          <p className="font-neue-plak text-[12px] leading-tight max-w-sm mb-3 whitespace-pre-line">
+          <p className="text-[12px] leading-tight max-w-sm mb-3 whitespace-pre-line">
             {
               'Advanced tech, superior comfort, and all\nperformance is what our latest UA gear is all\nabout. Built to go further, push hard, and break\nyour boundaries.'
             }
           </p>
-
-          <button
-            className=" font-neue-plak-regular text-[14px] bg-black text-white py-2 px-8
-           w-half text-center font-semibold sharp hover:bg-gray-800 transition"
-          >
+          <button className="text-[14px] bg-black text-white py-2 px-8 font-semibold hover:bg-gray-800 transition">
             Shop UA New Arrivals
           </button>
         </div>
       </section>
 
-      {/* Section 2 */}
+      {/* Section 2: Categories */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
-        <h2 className="text-[24px] font-neue-plak font-bold mb-2 text-left">
-          Our Best Gear
-        </h2>
-        <p className="text-[14px] font-neue-plak font-normal mb-3 text-left text-gray-600">
+        <h2 className="text-[24px] font-bold mb-2">Our Best Gear</h2>
+        <p className="text-[14px] text-gray-600 mb-3">
           Unlock your potential with the best UA Gear
         </p>
         <div className="grid grid-cols-4 gap-6">
           {categories.map((category) => (
-            <div key={category.name} className="relative">
-              <img
-                src={category.img}
-                alt={category.name}
-                className="w-full h-auto shadow-lg object-cover"
-              />
-              <Link
-                to={`/${category.name.toLowerCase()}`}
-                className="block mt-2 text-left text-black font-neue-plak font-semibold text-[14px] hover:underline"
-              >
-                Shop Now
-              </Link>
-            </div>
+            <CategoryCard key={category.name} {...category} />
           ))}
         </div>
       </section>
 
-      {/* Section 3 */}
+      {/* Section 3: Project Rock */}
       <section className="relative py-1 text-white flex items-center px-8 mb-10">
         <div className="w-full h-[500px]">
           <img
@@ -115,59 +128,47 @@ const IndexDesktop: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
-
         <div className="absolute top-0 right-[20px] w-[30%] h-full flex flex-col justify-center items-start space-y-3 px-6">
           <h3 className="font-neue-plak font-bold text-[16px] mb-4">
             Project Rock
           </h3>
-
           <h1 className="font-neue-plak font-black text-[48px] leading-[0.95] mb-4">
-            <span>EVERY SIDE</span>
-            <br />
-            <span>OF STRONG</span>
+            EVERY SIDE <br /> OF STRONG
           </h1>
-
           <p className="font-neue-plak text-[14px] leading-relaxed max-w-sm mb-6">
             The Underground collection is inspired by the idea of a Project Rock
             fight club. A place where we push each other harder to make each
-            other stronger. A drop dedicated to you and your crew. The neon
-            colourways are a reflection of the energy we bring to every rep,
-            every set, and every challenge.
+            other stronger. A drop dedicated to you and your crew The neon
+            colorways reflect the energy we bring to every rep, every set, and
+            every challenge.
           </p>
-
           <button className="bg-transparent border border-white text-white font-neue-plak text-[16px] py-2 px-12 text-center font-semibold hover:bg-white hover:text-black transition">
             Shop Project Rock
           </button>
         </div>
       </section>
 
-      {/* Section 4 */}
+      {/* Section 4: Promotions */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
-        <h2 className="text-[24px] font-neue-plak font-bold mb-2 text-left">
+        <h2 className="text-[24px] font-bold mb-2">
           Discover Our Latest Promotions
         </h2>
-        <p className="text-[14px] font-neue-plak font-normal mb-6 text-left text-gray-600">
+        <p className="text-[14px] text-gray-600 mb-6">
           Get the best deals on the best gear.
         </p>
         <div className="grid grid-cols-4 gap-6">
           {promotions.map((promo, index) => (
-            <div key={index} className="relative">
-              <img
-                src={promo.img}
-                alt={`Promo ${index + 1}`}
-                className="w-full h-auto shadow-lg object-cover"
-              />
-            </div>
+            <PromoCard key={index} img={promo.img} />
           ))}
         </div>
       </section>
 
-      {/* Section 5 */}
+      {/* Section 5: Instagram Feed */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
-        <h2 className="text-[24px] font-neue-plak font-bold mb-2 text-left">
-          What's happening on Instagram
+        <h2 className="text-[24px] font-bold mb-2">
+          What's Happening on Instagram
         </h2>
-        <p className="text-[14px] font-neue-plak font-normal mb-6 text-left text-gray-600">
+        <p className="text-[14px] text-gray-600 mb-6">
           Don't miss out on the latest news and updates from Under Armour.
         </p>
         <div className="flex flex-wrap lg:flex-nowrap gap-5">
@@ -187,13 +188,7 @@ const IndexDesktop: React.FC = () => {
           </div>
           <div className="w-full grid grid-cols-2 gap-5">
             {instagramImages.map((img, index) => (
-              <div key={index} className="relative overflow-hidden">
-                <img
-                  src={img}
-                  alt={`Instagram ${index + 1}`}
-                  className="w-full h-full object-contain shadow-lg"
-                />
-              </div>
+              <InstagramCard key={index} img={img} />
             ))}
           </div>
         </div>
