@@ -182,7 +182,7 @@ const IndexDesktop: React.FC = () => {
             >
               <source src="/assets/videos/ig_video.mp4" type="video/mp4" />
             </video>
-            <div className="absolute bottom-0 right-0 bg-white p-2 shadow-lg">
+            <div className="absolute bottom-0 right-0 bg-white p-3 shadow-lg">
               <FaInstagram className="text-black w-14 h-14" />
             </div>
           </div>
