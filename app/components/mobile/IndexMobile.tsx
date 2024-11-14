@@ -64,14 +64,17 @@ const IndexMobile: React.FC = () => {
         </video>
 
         <div className="bg-white py-5 px-10 text-left max-w-3xl mx-auto">
-          <h2 className="font-neue-plak font-black text-[48px] leading-[1.1] mb-6">
-            CHECK OUT OUR LATEST GEAR
-          </h2>
+          <h1 className="font-neue-plak font-black text-[48px] leading-[1]  mb-2">
+            <span>CHECK OUT OUR</span>
+            <br />
+            <span>LATEST GEAR</span>
+            <br />
+          </h1>
 
           <p className="font-neue-plak font-normal text-[14px]text-left leading-[1.6] mb-4 text-black">
-            Advanced tech, superior comfort, and all performance is what our
-            latest UA gear is all about. Built to go further, push hard, and
-            break your boundaries.
+            Advanced tech, superior comfort, and all performance is <br />
+            what our latest UA gear is all about. Built to go further, <br />
+            push hard, and break your boundaries.
           </p>
 
           <Link to="/new-arrivals">
@@ -125,11 +128,12 @@ const IndexMobile: React.FC = () => {
           </h2>
 
           <p className="font-neue-plak font-normal text-[14px] leading-[1.6] text-gray-600 mb-8 text-left">
-            The Underground collection is inspired by the idea of a Project Rock
-            fight club. A place where we push each other harder to make each
-            other stronger. A drop dedicated to you and your crew. The neon
-            colourways are a reflection of the energy we bring to every rep,
-            every set, and every challenge.
+            The Underground collection is inspired by the idea of <br />
+            a Project Rock fight club. A place where we push each <br />
+            other harder to make each other stronger. A drop <br />
+            dedicated to you and your crew. The neon colourways are <br />
+            a reflection of the energy we bring to every rep,every set, <br />
+            and every challenge.
           </p>
 
           <Link to="/project-rock">
