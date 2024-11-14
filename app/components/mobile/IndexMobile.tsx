@@ -38,7 +38,8 @@ const instagramImages: InstagramItem[] = [
   '/assets/images/IG Image 5_DT.jpg',
 ];
 
-const sliderSettings = {
+// Slider settings
+const sliderSettings: Slider.Settings = {
   dots: false,
   infinite: true,
   speed: 500,
@@ -51,7 +52,7 @@ const sliderSettings = {
 const IndexMobile: React.FC = () => {
   return (
     <div className="bg-gray-100 text-black font-neue-plak">
-      {/* Section 1 */}
+      {/* Section 1: Video Header */}
       <section className="relative w-full mb-16">
         <video
           autoPlay
@@ -64,37 +65,30 @@ const IndexMobile: React.FC = () => {
         </video>
 
         <div className="bg-white py-5 px-10 text-left max-w-3xl mx-auto">
-          <h1 className="font-neue-plak font-black text-[48px] leading-[1]  mb-2">
-            <span>CHECK OUT OUR</span>
-            <br />
-            <span>LATEST GEAR</span>
-            <br />
+          <h1 className="font-neue-plak font-black text-[48px] leading-[1] mb-2">
+            CHECK OUT OUR <br /> LATEST GEAR
           </h1>
-
-          <p className="font-neue-plak font-normal text-[14px]text-left leading-[1.6] mb-4 text-black">
+          <p className="font-neue-plak font-normal text-[14px] leading-[1.6] mb-4">
             Advanced tech, superior comfort, and all performance is <br />
             what our latest UA gear is all about. Built to go further, <br />
             push hard, and break your boundaries.
           </p>
-
           <Link to="/new-arrivals">
-            <button className="bg-black text-white font-neue-plak font-normal text-[14px] py-3 w-full sharp hover:bg-gray-800 transition">
+            <button className="bg-black text-white font-neue-plak font-normal text-[14px] py-3 w-full hover:bg-gray-800 transition">
               Shop UA New Arrivals
             </button>
           </Link>
         </div>
       </section>
 
-      {/* Section 2 */}
+      {/* Section 2: Categories Slider */}
       <section className="py-1 bg-gray-100 px-4">
-        <h2 className="font-neue-plak font-black text-[22px] leading-tight mb-2 text-left">
+        <h2 className="font-neue-plak font-black text-[22px] mb-2">
           Our Best Gear
         </h2>
-
-        <p className="font-neue-plak font-normal text-[14px] leading-[1.6] mb-6 text-left text-gray-600">
+        <p className="font-neue-plak font-normal text-[14px] text-gray-600 mb-6">
           Unlock your potential with the best UA Gear
         </p>
-
         <Slider {...sliderSettings}>
           {categories.map((category) => (
             <div key={category.name} className="p-2">
@@ -108,7 +102,7 @@ const IndexMobile: React.FC = () => {
         </Slider>
       </section>
 
-      {/* Section 3 */}
+      {/* Section 3: Project Rock */}
       <section className="bg-gray-100 text-black py-5 px-0 w-full">
         <div className="relative w-full">
           <img
@@ -117,49 +111,46 @@ const IndexMobile: React.FC = () => {
             className="w-full h-auto object-cover shadow-xl"
           />
         </div>
-
         <div className="w-full max-w-4xl mx-auto px-4 mt-8">
-          <p className="font-neue-plak font-bold text-[16px] mb-2 text-left">
+          <p className="font-neue-plak font-bold text-[16px] mb-2">
             Project Rock
           </p>
-
-          <h2 className="font-neue-plak font-black text-[48px] leading-tight mb-2 text-left">
+          <h2 className="font-neue-plak font-black text-[48px] leading-tight mb-2">
             EVERY SIDE <br /> OF STRONG
           </h2>
-
-          <p className="font-neue-plak font-normal text-[14px] leading-[1.6] text-gray-600 mb-8 text-left">
-            The Underground collection is inspired by the idea of <br />
-            a Project Rock fight club. A place where we push each <br />
-            other harder to make each other stronger. A drop <br />
-            dedicated to you and your crew. The neon colourways are <br />
-            a reflection of the energy we bring to every rep,every set, <br />
+          <p className="font-neue-plak font-normal text-[14px] text-gray-600 leading-[1.6] mb-8">
+            The Underground collection is inspired by the idea of a <br />
+            Project Rock fight club. A place where we push each
+            <br />
+            other harder to make each other stronger. A drop
+            <br />
+            dedicated to you and your crew.The neon colourways are <br />
+            a reflection of the energy we bring to every rep,every set
+            <br />
             and every challenge.
           </p>
-
           <Link to="/project-rock">
-            <button className="bg-black text-white font-neue-plak font-normal text-[14px] py-3 w-full sharp hover:bg-gray-800 transition">
+            <button className="bg-black text-white font-neue-plak text-[14px] py-3 w-full hover:bg-gray-800 transition">
               Shop Project Rock
             </button>
           </Link>
         </div>
       </section>
 
-      {/* Section 4 */}
+      {/* Section 4: Promotions Slider */}
       <section className="py-3 bg-gray-100 px-4">
-        <h2 className="font-neue-plak font-bold text-[22px] mb-1 text-left">
+        <h2 className="font-neue-plak font-bold text-[22px] mb-1">
           Discover Our Latest Promotions
         </h2>
-
-        <p className="font-neue-plak font-normal text-[14px] text-gray-600 mb-4 text-left">
+        <p className="font-neue-plak font-normal text-[14px] text-gray-600 mb-4">
           Get the best deals on the best gear.
         </p>
-
         <Slider {...sliderSettings}>
           {promotions.map((promo, index) => (
-            <div key={index} className="p-2 relative">
+            <div key={index} className="p-2">
               <img
                 src={promo.img}
-                alt="Promotion"
+                alt={`Promotion ${index + 1}`}
                 className="w-full h-auto shadow-lg object-cover"
               />
             </div>
@@ -167,13 +158,12 @@ const IndexMobile: React.FC = () => {
         </Slider>
       </section>
 
-      {/* Section 5 */}
+      {/* Section 5: Instagram Feed */}
       <section className="py-1 bg-gray-100 px-4">
-        <h2 className="font-neue-plak font-bold text-[22px] mb-1 text-left">
+        <h2 className="font-neue-plak font-bold text-[22px] mb-1">
           What's happening on Instagram
         </h2>
-
-        <p className="font-neue-plak font-normal text-[14px] text-gray-600 mb-4 text-left">
+        <p className="font-neue-plak font-normal text-[14px] text-gray-600 mb-4">
           Don't miss out on the latest news and updates from Under Armour.
         </p>
         <div className="relative w-full mb-6">
@@ -186,7 +176,7 @@ const IndexMobile: React.FC = () => {
           >
             <source src="/assets/videos/ig_video.mp4" type="video/mp4" />
           </video>
-          <div className="absolute bottom-0 right-0 bg-white p-2 sharp-full shadow-lg">
+          <div className="absolute bottom-0 right-0 bg-white p-2 shadow-lg">
             <FaInstagram className="text-black w-4 h-4" />
           </div>
         </div>
