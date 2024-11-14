@@ -64,11 +64,10 @@ const IndexDesktop: React.FC = () => {
             <span>GEAR</span>
           </h1>
 
-          <p className="font-neue-plak text-[12px] leading-tight max-w-sm mb-3">
-            Advanced tech, superior comfort, and all <br />
-            performance is what our latest UA gear is all <br />
-            about. Built to go further, push hard, and break <br />
-            your boundaries.
+          <p className="font-neue-plak text-[12px] leading-tight max-w-sm mb-3 whitespace-pre-line">
+            {
+              'Advanced tech, superior comfort, and all\nperformance is what our latest UA gear is all\nabout. Built to go further, push hard, and break\nyour boundaries.'
+            }
           </p>
 
           <button
