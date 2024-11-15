@@ -52,7 +52,7 @@ const sliderSettings: Slider.Settings = {
 const IndexMobile: React.FC = () => {
   return (
     <div className="bg-gray-100 text-black font-neue-plak">
-      {/* Section 1: Video Header */}
+      {/* Section 1 */}
       <section className="relative w-full mb-16">
         <video
           autoPlay
@@ -81,7 +81,7 @@ const IndexMobile: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2: Categories Slider */}
+      {/* Section 2 */}
       <section className="py-1 bg-gray-100 px-4">
         <h2 className="font-neue-plak font-black text-[22px] mb-2">
           Our Best Gear
@@ -102,7 +102,7 @@ const IndexMobile: React.FC = () => {
         </Slider>
       </section>
 
-      {/* Section 3: Project Rock */}
+      {/* Section 3 */}
       <section className="bg-gray-100 text-black py-5 px-0 w-full">
         <div className="relative w-full">
           <img
@@ -137,7 +137,7 @@ const IndexMobile: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 4: Promotions Slider */}
+      {/* Section 4 */}
       <section className="py-3 bg-gray-100 px-4">
         <h2 className="font-neue-plak font-bold text-[22px] mb-1">
           Discover Our Latest Promotions
@@ -158,7 +158,7 @@ const IndexMobile: React.FC = () => {
         </Slider>
       </section>
 
-      {/* Section 5: Instagram Feed */}
+      {/* Section 5 */}
       <section className="py-1 bg-gray-100 px-4">
         <h2 className="font-neue-plak font-bold text-[22px] mb-1">
           What's happening on Instagram
