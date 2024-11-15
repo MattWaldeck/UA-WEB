@@ -35,7 +35,6 @@ const instagramImages: InstagramItem[] = [
   '/assets/images/IG Image 5_DT.jpg',
 ];
 
-// Reusable Category Card Component
 const CategoryCard: React.FC<Category> = ({ name, img }) => (
   <div className="relative">
     <img
@@ -52,7 +51,6 @@ const CategoryCard: React.FC<Category> = ({ name, img }) => (
   </div>
 );
 
-// Reusable Promo Card Component
 const PromoCard: React.FC<{ img: string }> = ({ img }) => (
   <div className="relative">
     <img
@@ -63,7 +61,6 @@ const PromoCard: React.FC<{ img: string }> = ({ img }) => (
   </div>
 );
 
-// Reusable Instagram Card Component
 const InstagramCard: React.FC<{ img: string }> = ({ img }) => (
   <div className="relative overflow-hidden">
     <img
@@ -77,7 +74,7 @@ const InstagramCard: React.FC<{ img: string }> = ({ img }) => (
 const IndexDesktop: React.FC = () => {
   return (
     <div className="bg-gray-100 text-black font-neue-plak">
-      {/* Section 1: Video Header */}
+      {/* Section 1 */}
       <section className="relative w-full mb-14">
         <video
           autoPlay
@@ -106,7 +103,7 @@ const IndexDesktop: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2: Categories */}
+      {/* Section 2 */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
         <h2 className="text-[24px] font-bold mb-2">Our Best Gear</h2>
         <p className="text-[14px] text-gray-600 mb-3">
@@ -119,7 +116,7 @@ const IndexDesktop: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 3: Project Rock */}
+      {/* Section 3*/}
       <section className="relative py-1 text-white flex items-center px-8 mb-10">
         <div className="w-full h-[500px]">
           <img
@@ -148,7 +145,7 @@ const IndexDesktop: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 4: Promotions */}
+      {/* Section 4 */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
         <h2 className="text-[24px] font-bold mb-2">
           Discover Our Latest Promotions
@@ -163,7 +160,7 @@ const IndexDesktop: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 5: Instagram Feed */}
+      {/* Section 5 */}
       <section className="py-1 bg-gray-100 px-8 mb-10">
         <h2 className="text-[24px] font-bold mb-2">
           What's Happening on Instagram
