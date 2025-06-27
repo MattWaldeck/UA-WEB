@@ -92,28 +92,39 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Limited Time Section */}
-      <section className="py-8 px-4">
-        <div className="text-center bg-gray-100 p-4">
-          <h2 className="font-black text-4xl">{limitedTime.title}</h2>
-          <p className="text-md mt-1">{limitedTime.subtitle}</p>
-          <div className="my-4">
-            <span className="font-semibold">{limitedTime.expiryText}</span>
-            <span className="font-bold text-2xl ml-2 tracking-wider">
-              {countdown}
-            </span>
+      {/* REVISED Limited Time Section for Mobile */}
+      <section
+        style={{ backgroundImage: `url(${limitedTime.mobile.productImage})` }}
+        className="relative bg-cover bg-center text-white px-6 py-10"
+      >
+        {/* This is the line that sets your image. The overlay below makes text readable. */}
+        {/* NOTE: Opacity has been reduced from 40 to 25 to make the image more visible. */}
+        <div className="absolute inset-0 bg-black opacity-25"></div>
+
+        <div className="relative z-10 text-left">
+          {/* Red box with title */}
+          <div className="bg-[#D22730] p-3 inline-block">
+            <h2 className="font-black text-3xl leading-none">LIMITED TIME</h2>
+            <p className="font-semibold text-xs mt-1 uppercase">
+              Get these deals, 24 hours only
+            </p>
+          </div>
+
+          {/* Countdown and button */}
+          <div className="mt-8">
+            <p className="font-extrabold text-4xl tracking-tight uppercase">
+              {limitedTime.expiryText} {countdown}
+            </p>
+            <p className="text-xs mt-2 font-light">
+              Check it NOW. New deals dropping every 48 hours.
+            </p>
+            <Link to={limitedTime.buttonLink} className="block mt-6">
+              <button className="bg-white text-black font-semibold py-3 px-10 text-sm">
+                {limitedTime.buttonText}
+              </button>
+            </Link>
           </div>
         </div>
-        <img
-          src={limitedTime.mobile.productImage}
-          alt="Limited Time Offer"
-          className="w-full h-auto mt-[-1px]"
-        />
-        <Link to={limitedTime.buttonLink} className="block mx-4 mt-4">
-          <button className="bg-black text-white font-semibold py-3 w-full hover:bg-gray-800 transition">
-            {limitedTime.buttonText}
-          </button>
-        </Link>
       </section>
 
       {/* Promotions Section */}

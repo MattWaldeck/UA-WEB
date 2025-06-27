@@ -85,33 +85,33 @@ const IndexDesktop: React.FC<ContentProps> = ({
       {/* Limited Time Section */}
       <section
         style={{ backgroundImage: `url(${limitedTime.desktop.background})` }}
-        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center"
+        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[420px]"
       >
-        <div className="w-1/2">
-          <h2 className="font-black text-6xl leading-tight">
-            {limitedTime.title}
-          </h2>
-          <p className="text-xl mt-2">{limitedTime.subtitle}</p>
-          <div className="mt-6">
-            <span className="font-semibold text-lg">
-              {limitedTime.expiryText}
-            </span>
-            <span className="font-bold text-4xl ml-3 tracking-widest">
-              {countdown}
-            </span>
+        {/* Single container for the dynamic content. The layout fix (removing the 50/50 split) is kept. */}
+        <div>
+          {/* The h2 and p tags for the title and subtitle are removed to prevent duplication.
+      We add a top margin to the container below to position the dynamic content correctly.
+    */}
+          <div className="mt-28">
+            {' '}
+            {/* You can adjust this margin-top value to perfectly align the content */}
+            <div>
+              <span className="font-semibold text-lg uppercase">
+                {limitedTime.expiryText}
+              </span>
+              <span className="font-bold text-4xl ml-3 tracking-widest">
+                {countdown}
+              </span>
+            </div>
+            <p className="text-xs mt-2">
+              Check in NOW. New deals dropping every 48 hours.
+            </p>
             <Link to={limitedTime.buttonLink}>
-              <button className="mt-8 bg-white text-black font-semibold py-3 px-12 text-md hover:bg-gray-200 transition">
+              <button className="mt-6 bg-white text-black font-semibold py-3 px-12 text-md hover:bg-gray-200 transition">
                 {limitedTime.buttonText}
               </button>
             </Link>
           </div>
-        </div>
-        <div className="w-1/2 flex justify-center">
-          <img
-            src={limitedTime.desktop.productImage}
-            alt="Limited Time Offer"
-            className="w-full max-w-lg"
-          />
         </div>
       </section>
 
@@ -145,6 +145,11 @@ const IndexDesktop: React.FC<ContentProps> = ({
             className="font-black text-9xl leading-none"
             dangerouslySetInnerHTML={{ __html: evenMoreForLess.title }}
           />
+          <Link to={evenMoreForLess.buttonLink} className="block mt-4">
+            <button className="bg-white text-black font-semibold py-2 px-8 text-sm">
+              {evenMoreForLess.buttonText}
+            </button>
+          </Link>
         </div>
       </section>
 

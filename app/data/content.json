@@ -13,17 +13,16 @@
     "buttonLink": "/sale"
   },
   "limitedTime": {
-    "title": "LIMITED TIME",
-    "subtitle": "GET THESE DEALS, 24 HOURS ONLY",
+    "title": "",
+    "subtitle": "",
     "expiryText": "EXPIRES IN",
     "buttonText": "Shop Now",
     "buttonLink": "/limited-time-offers",
     "desktop": {
-      "background": "/assets/images/dt.jpg",
-      "productImage": "/assets/images/banner 1 (1).jpg"
+      "background": "public/assets/images/Desktop.png"
     },
     "mobile": {
-      "productImage": "/assets/images/banner 1.jpg"
+      "productImage": "/assets/images/hero banner.png"
     }
   },
   "promotions": {
@@ -51,7 +50,7 @@
     "title": "",
     "buttonText": "Shop Promotions",
     "buttonLink": "/promotions",
-    "desktopImage": "/assets/images/desktop banner.jpg",
+    "desktopImage": "public/assets/images/BannersDT.png",
     "mobileImage": "/assets/images/banner 2.jpg"
   },
   "productCarousel": {
