@@ -12,7 +12,6 @@ type ContentProps = {
   productCarousel: any;
 };
 
-// Slider settings for promotions
 const promoSliderSettings: Settings = {
   dots: false,
   infinite: false,
@@ -59,12 +58,10 @@ const IndexMobile: React.FC<ContentProps> = ({
   evenMoreForLess,
   productCarousel,
 }) => {
-  // TODO: Implement dynamic countdown logic
   const countdown = '16:54:29';
 
   return (
     <div className="bg-white text-black font-neue-plak overflow-x-hidden">
-      {/* Hero Section */}
       <section className="relative w-full h-[80vh] flex items-end text-white overflow-hidden p-6 text-left">
         <video
           autoPlay
@@ -76,7 +73,7 @@ const IndexMobile: React.FC<ContentProps> = ({
         >
           <source src={hero.mobile.video} type="video/mp4" />
         </video>
-        {/* Overlay to help text stand out */}
+
         <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
 
         <div className="relative z-20">
@@ -92,17 +89,13 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* REVISED Limited Time Section for Mobile */}
       <section
         style={{ backgroundImage: `url(${limitedTime.mobile.productImage})` }}
         className="relative bg-cover bg-center text-white px-6 py-10"
       >
-        {/* This is the line that sets your image. The overlay below makes text readable. */}
-        {/* NOTE: Opacity has been reduced from 40 to 25 to make the image more visible. */}
         <div className="absolute inset-0 bg-black opacity-25"></div>
 
         <div className="relative z-10 text-left">
-          {/* Red box with title */}
           <div className="bg-[#D22730] p-3 inline-block">
             <h2 className="font-black text-3xl leading-none">LIMITED TIME</h2>
             <p className="font-semibold text-xs mt-1 uppercase">
@@ -110,7 +103,6 @@ const IndexMobile: React.FC<ContentProps> = ({
             </p>
           </div>
 
-          {/* Countdown and button */}
           <div className="mt-8">
             <p className="font-extrabold text-4xl tracking-tight uppercase">
               {limitedTime.expiryText} {countdown}
@@ -127,7 +119,6 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Promotions Section */}
       <section className="py-8 bg-white">
         <h2 className="text-xl font-bold mb-4 px-4">{promotions.title}</h2>
         <Slider {...promoSliderSettings}>
@@ -145,7 +136,6 @@ const IndexMobile: React.FC<ContentProps> = ({
         </Slider>
       </section>
 
-      {/* Even More For Less Section */}
       <section className="relative text-white">
         <img
           src={evenMoreForLess.mobileImage}
@@ -165,7 +155,6 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Product Pull Through Section */}
       <section className="py-8 bg-white px-4">
         <h2 className="text-xl font-bold mb-4 text-center">
           {productCarousel.title}

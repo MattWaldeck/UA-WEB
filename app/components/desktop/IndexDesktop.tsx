@@ -1,7 +1,6 @@
 import { Link } from '@remix-run/react';
 import React from 'react';
 
-// Define types for our content props
 type ContentProps = {
   hero: any;
   limitedTime: any;
@@ -10,7 +9,6 @@ type ContentProps = {
   productCarousel: any;
 };
 
-// Reusable Product Card Component
 const ProductCard: React.FC<{ product: any }> = ({ product }) => (
   <div className="text-left">
     <div className="bg-gray-200 aspect-square w-full flex items-center justify-center overflow-hidden relative group">
@@ -49,12 +47,10 @@ const IndexDesktop: React.FC<ContentProps> = ({
   evenMoreForLess,
   productCarousel,
 }) => {
-  // TODO: Implement dynamic countdown logic.
   const countdown = '16:54:29';
 
   return (
     <div className="bg-white text-black font-neue-plak">
-      {/* Hero Section */}
       <section className="relative w-full h-[80vh] flex items-end text-white overflow-hidden">
         <video
           autoPlay
@@ -66,7 +62,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
         >
           <source src={hero.desktop.video} type="video/mp4" />
         </video>
-        {/* Overlay to help text stand out */}
+
         <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
 
         <div className="relative z-20 w-full px-16 pb-16">
@@ -82,19 +78,13 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Limited Time Section */}
       <section
         style={{ backgroundImage: `url(${limitedTime.desktop.background})` }}
-        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[420px]"
+        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px]"
       >
-        {/* Single container for the dynamic content. The layout fix (removing the 50/50 split) is kept. */}
         <div>
-          {/* The h2 and p tags for the title and subtitle are removed to prevent duplication.
-      We add a top margin to the container below to position the dynamic content correctly.
-    */}
           <div className="mt-28">
             {' '}
-            {/* You can adjust this margin-top value to perfectly align the content */}
             <div>
               <span className="font-semibold text-lg uppercase">
                 {limitedTime.expiryText}
@@ -115,7 +105,6 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Promotions Section */}
       <section className="py-16 bg-white px-8">
         <h2 className="text-3xl font-bold mb-8 text-center">
           {promotions.title}
@@ -133,7 +122,6 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Even More For Less Section */}
       <section className="relative text-white">
         <img
           src={evenMoreForLess.desktopImage}
@@ -153,7 +141,6 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* Product Carousel Section */}
       <section className="py-16 bg-white px-8">
         <h2 className="text-3xl font-bold mb-8 text-center">
           {productCarousel.title}

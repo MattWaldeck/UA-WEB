@@ -22,7 +22,7 @@
       "background": "public/assets/images/Desktop.png"
     },
     "mobile": {
-      "productImage": "/assets/images/hero banner.png"
+      "productImage": "public/assets/images/hero banner.png"
     }
   },
   "promotions": {
