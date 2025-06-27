@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "desktop": {
+      "video": "/assets/videos/Landing Page.mp4"
+    },
+    "mobile": {
+      "video": "/assets/videos/1x1.mp4"
+    },
+    "title": "",
+    "mainSubtitle": "END OF SEASON SALE NOW LIVE",
+    "secondarySubtitle": "GET UP TO 50% OFF",
+    "buttonText": "SHOP UA SALE",
+    "buttonLink": "/sale"
+  },
+  "limitedTime": {
+    "title": "LIMITED TIME",
+    "subtitle": "GET THESE DEALS, 24 HOURS ONLY",
+    "expiryText": "EXPIRES IN",
+    "buttonText": "Shop Now",
+    "buttonLink": "/limited-time-offers",
+    "desktop": {
+      "background": "/assets/images/dt.jpg",
+      "productImage": "/assets/images/banner 1 (1).jpg"
+    },
+    "mobile": {
+      "productImage": "/assets/images/banner 1.jpg"
+    }
+  },
+  "promotions": {
+    "title": "PERFORMANCE-READY GEAR ON SALE NOW!",
+    "items": [
+      {
+        "img": "/assets/images/image04.jpg",
+        "link": "/under-600"
+      },
+      {
+        "img": "/assets/images/image03.jpg",
+        "link": "/under-1000"
+      },
+      {
+        "img": "/assets/images/image02.jpg",
+        "link": "/under-1500"
+      },
+      {
+        "img": "/assets/images/image01.jpg",
+        "link": "/top-picks"
+      }
+    ]
+  },
+  "evenMoreForLess": {
+    "title": "",
+    "buttonText": "Shop Promotions",
+    "buttonLink": "/promotions",
+    "desktopImage": "/assets/images/desktop banner.jpg",
+    "mobileImage": "/assets/images/banner 2.jpg"
+  },
+  "productCarousel": {
+    "title": "Product Pull through",
+    "items": [
+      {
+        "name": "UA Charged Assert 9 Men's",
+        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "price": "R 849.00",
+        "originalPrice": "R 1049.00",
+        "isNew": true,
+        "link": "/product/1"
+      },
+      {
+        "name": "UA Tech™ 2.0 Short Sleeve",
+        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "price": "R 549.00",
+        "originalPrice": null,
+        "isNew": false,
+        "link": "/product/2"
+      },
+      {
+        "name": "UA Rival Fleece Joggers",
+        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "price": "R 999.00",
+        "originalPrice": null,
+        "isNew": false,
+        "link": "/product/3"
+      },
+      {
+        "name": "Women's HeatGear® Armour",
+        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "price": "R 649.00",
+        "originalPrice": "R 849.00",
+        "isNew": true,
+        "link": "/product/4"
+      }
+    ]
+  }
+}
