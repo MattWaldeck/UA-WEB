@@ -80,7 +80,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
 
   return (
     <div className="bg-white text-black font-neue-plak">
-      <section className="relative w-full h-[90vh] flex items-end text-white overflow-hidden">
+      <section className="relative w-full h-[91vh] 2xl:h-[83vh] flex items-end text-white overflow-hidden">
         <video
           autoPlay
           loop
@@ -92,7 +92,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
           <source src={hero.desktop.video} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
-        <div className="relative z-20 w-full px-6 pb-8">
+        <div className="relative z-20 w-full px-5 pb-8">
           <h2 className="font-black text-6xl leading-none text-black">
             END OF SEASON
             <br />
@@ -109,7 +109,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
 
       <section
         style={{ backgroundImage: `url(${limitedTime.desktop.background})` }}
-        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px] max-w-[1400px] mx-auto mt-8"
+        className="relative bg-cover bg-center text-white py-10 px-24 flex items-center min-h-[580px] max-w-[1400px] 2xl:max-w-[1680px] mx-auto mt-8"
       >
         <div>
           <div className="mt-52">

@@ -158,9 +158,9 @@ const IndexMobile: React.FC<ContentProps> = ({
           alt="Even more for less"
           className="w-full h-auto"
         />
-        <div className="text-start mt-2">
+        <div className="text-start mt-2 pl-4">
           <Link to={evenMoreForLess.buttonLink} className="block">
-            <button className="bg-black text-white font-semibold py-4 px-8 text-sm">
+            <button className="bg-black text-white font-semibold py-4 px-9 text-sm ">
               {evenMoreForLess.buttonText}
             </button>
           </Link>
