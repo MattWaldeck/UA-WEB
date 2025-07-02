@@ -51,7 +51,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
 
   return (
     <div className="bg-white text-black font-neue-plak">
-      <section className="relative w-full h-[80vh] flex items-end text-white overflow-hidden">
+      <section className="relative w-full h-[90vh] flex items-end text-white overflow-hidden">
         <video
           autoPlay
           loop

@@ -62,7 +62,7 @@ const IndexMobile: React.FC<ContentProps> = ({
 
   return (
     <div className="bg-white text-black font-neue-plak overflow-x-hidden">
-      <section className="relative w-full h-[80vh] flex items-end text-white overflow-hidden p-6 text-left">
+      <section className="relative w-full h-[46vh] flex items-end text-white overflow-hidden p-6 text-left">
         <video
           autoPlay
           loop
