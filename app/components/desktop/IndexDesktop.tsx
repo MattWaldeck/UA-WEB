@@ -83,21 +83,21 @@ const IndexDesktop: React.FC<ContentProps> = ({
         className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px] max-w-[1400px]  mx-auto mt-8"
       >
         <div>
-          <div className="mt-60">
+          <div className="mt-52">
             {' '}
             <div>
-              <span className="font-semibold text-lg uppercase">
+              <span className="font-neue-plak font-bold text-4xl uppercase ">
                 {limitedTime.expiryText}
               </span>
-              <span className="font-bold text-4xl ml-3 tracking-widest">
+              <span className="font-bold text-4xl ml-3 tracking-wide">
                 {countdown}
               </span>
             </div>
-            <p className="text-xs mt-2">
+            <p className="text-xs font-regular mt-3">
               Check in NOW. New deals dropping every 48 hours.
             </p>
             <Link to={limitedTime.buttonLink}>
-              <button className="mt-6 bg-white text-black font-semibold py-3 px-12 text-md hover:bg-gray-200 transition">
+              <button className="mt-20 bg-white text-black font-regular py-3 px-8 text-md hover:bg-gray-200 transition">
                 {limitedTime.buttonText}
               </button>
             </Link>
@@ -105,7 +105,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      <section className="py-16 bg-white px-8">
+      <section className="py-8 bg-white px-8">
         <h2 className="text-3xl font-bold mb-8 text-start whitespace-pre-line">
           {promotions.title}
         </h2>
@@ -128,13 +128,13 @@ const IndexDesktop: React.FC<ContentProps> = ({
           alt="Even more for less"
           className="w-full h-auto"
         />
-        <div className="absolute inset-0 flex items-center justify-start px-24">
+        <div className="absolute inset-0 flex items-end justify-center px-24 mb-40 ">
           <h2
             className="font-black text-9xl leading-none"
             dangerouslySetInnerHTML={{ __html: evenMoreForLess.title }}
           />
           <Link to={evenMoreForLess.buttonLink} className="block mt-4">
-            <button className="bg-white text-black font-semibold py-2 px-8 text-sm">
+            <button className="bg-white text-black font-regular py-2 px-4 text-sm">
               {evenMoreForLess.buttonText}
             </button>
           </Link>
