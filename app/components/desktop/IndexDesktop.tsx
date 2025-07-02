@@ -80,10 +80,10 @@ const IndexDesktop: React.FC<ContentProps> = ({
 
       <section
         style={{ backgroundImage: `url(${limitedTime.desktop.background})` }}
-        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px]"
+        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px] max-w-[1400px]  mx-auto mt-8"
       >
         <div>
-          <div className="mt-28">
+          <div className="mt-60">
             {' '}
             <div>
               <span className="font-semibold text-lg uppercase">
@@ -106,7 +106,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
       </section>
 
       <section className="py-16 bg-white px-8">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-start whitespace-pre-line">
           {promotions.title}
         </h2>
         <div className="grid grid-cols-4 gap-6">
@@ -141,11 +141,11 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      <section className="py-16 bg-white px-8">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+      <section className="py-1 bg-white px-8">
+        <h2 className="text-3xl font-bold mb-2 text-center">
           {productCarousel.title}
         </h2>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-4 gap-3 mb-20">
           {productCarousel.items.map((product: any, index: number) => (
             <ProductCard key={index} product={product} />
           ))}

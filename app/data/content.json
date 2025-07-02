@@ -26,7 +26,7 @@
     }
   },
   "promotions": {
-    "title": "PERFORMANCE-READY GEAR ON SALE NOW!",
+    "title": "PERFORMANCE-READY GEAR\nON SALE NOW!",
     "items": [
       {
         "img": "/assets/images/image04.jpg",
@@ -54,7 +54,7 @@
     "mobileImage": "/assets/images/banner 2.jpg"
   },
   "productCarousel": {
-    "title": "Product Pull through",
+    "title": "",
     "items": [
       {
         "name": "UA Charged Assert 9 Men's",
