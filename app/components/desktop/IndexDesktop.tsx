@@ -98,9 +98,9 @@ const IndexDesktop: React.FC<ContentProps> = ({
             <br />
             SALE NOW LIVE
           </h2>
-          <p className="text-xl mt-2 text-black">{hero.secondarySubtitle}</p>
+          <p className="text-md mt-2 text-black">{hero.secondarySubtitle}</p>
           <Link to={hero.buttonLink}>
-            <button className="mt-6 bg-black text-white font-semibold py-3 px-10 text-md hover:bg-gray-800 transition">
+            <button className="mt-6 bg-black text-white font-regular py-3 px-10 text-sm hover:bg-gray-800 transition">
               {hero.buttonText}
             </button>
           </Link>

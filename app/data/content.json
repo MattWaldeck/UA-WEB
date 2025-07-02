@@ -8,7 +8,7 @@
     },
     "title": "",
     "mainSubtitle": "END OF SEASON SALE NOW LIVE",
-    "secondarySubtitle": "UP TO 50% OFF",
+    "secondarySubtitle": "GET UP TO 50% OFF",
     "buttonText": "Shop UA Sale",
     "buttonLink": "/sale"
   },
@@ -58,7 +58,7 @@
     "items": [
       {
         "name": "",
-        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "img": "",
         "price": "R 849.00",
         "originalPrice": "R 1049.00",
         "isNew": true,
@@ -66,7 +66,7 @@
       },
       {
         "name": "",
-        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "img": "",
         "price": "R 549.00",
         "originalPrice": null,
         "isNew": false,
@@ -74,7 +74,7 @@
       },
       {
         "name": "",
-        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "img": "",
         "price": "R 999.00",
         "originalPrice": null,
         "isNew": false,
@@ -82,7 +82,7 @@
       },
       {
         "name": "",
-        "img": "https://via.placeholder.com/400x400.png?text=Product",
+        "img": "",
         "price": "R 649.00",
         "originalPrice": "R 849.00",
         "isNew": true,
