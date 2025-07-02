@@ -48,24 +48,17 @@ const Index: React.FC<ContentProps> = ({
   productCarousel,
 }) => {
   const [countdown, setCountdown] = useState('');
-  // State to hold the correct video source
-  const [videoSrc, setVideoSrc] = useState(hero.mobile.video); // Default to mobile
+  const [videoSrc, setVideoSrc] = useState(hero.mobile.video);
 
   useEffect(() => {
-    // This effect runs only on the client-side
     const handleResize = () => {
       const newSrc =
         window.innerWidth < 768 ? hero.mobile.video : hero.desktop.video;
       setVideoSrc(newSrc);
     };
 
-    // Set the correct video on initial load
     handleResize();
-
-    // Add listener for window resize to handle orientation changes or desktop resizing
     window.addEventListener('resize', handleResize);
-
-    // Cleanup listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, [hero.desktop.video, hero.mobile.video]);
 
@@ -100,20 +93,20 @@ const Index: React.FC<ContentProps> = ({
 
   return (
     <div className="bg-white text-black font-neue-plak">
-      {/* Hero Video Section --- UPDATED --- */}
-      <section className="relative w-full h-[92vh] md:h-auto md:aspect-[2/1] md:max-h-[650px] flex items-end text-white overflow-hidden">
+      {/* Hero Video Section */}
+      <section className="relative w-full h-[92vh] md:h-auto md:aspect-[2/1] md:max-h-[650px] text-white overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute z-0 top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-3/4 md:static md:translate-x-0 md:translate-y-0 md:object-cover md:w-full md:h-full"
-          key={videoSrc} // Using the key ensures React replaces the video element when the source changes
+          className="absolute z-0 top-0 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 md:static md:translate-x-0 md:object-cover md:w-full md:h-full"
+          key={videoSrc}
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-10 z-10 hidden md:block"></div>
-        <div className="relative z-20 w-full px-5 pb-8 md:absolute md:bottom-10 md:left-2 md:text-left text-start">
+        <div className="absolute z-20 bottom-8 w-full px-5 md:bottom-10 md:left-2 md:text-left text-start">
           <h2 className="font-black text-3xl md:text-6xl leading-tight md:leading-none text-black md:black">
             SHOP OUR
             <br />
@@ -224,11 +217,11 @@ const Index: React.FC<ContentProps> = ({
               className="text-5xl md:text-9xl font-black leading-none"
               dangerouslySetInnerHTML={{ __html: evenMoreForLess.title }}
             />
-            <Link to={evenMoreForLess.buttonLink} className="block mt-4">
+            {/* <Link to={evenMoreForLess.buttonLink} className="block mt-4">
               <button className="bg-white text-black py-3 px-8 text-sm">
                 {evenMoreForLess.buttonText}
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
