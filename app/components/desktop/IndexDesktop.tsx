@@ -92,7 +92,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
           <source src={hero.desktop.video} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
-        <div className="relative z-20 w-full px-2 pb-8">
+        <div className="relative z-20 w-full px-6 pb-8">
           <h2 className="font-black text-6xl leading-none text-black">
             END OF SEASON
             <br />
@@ -133,7 +133,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      <section className="py-8 bg-white px-8">
+      <section className="py-8 bg-white px-6">
         <h2 className="text-3xl font-bold mb-8 text-start whitespace-pre-line">
           {promotions.title}
         </h2>

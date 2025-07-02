@@ -93,15 +93,15 @@ const IndexMobile: React.FC<ContentProps> = ({
         </video>
       </section>
 
-      <section className="bg-white text-start py-3 px-4">
+      <section className="bg-white text-start py-3 px-2">
         <h2 className="font-black text-3xl leading-tight">
           SHOP OUR
           <br />
           END OF SEASON SALE
         </h2>
-        <p className="text-lg mt-1 tracking-wider">{hero.secondarySubtitle}</p>
+        <p className="text-sm mt-1 tracking-wider">{hero.secondarySubtitle}</p>
         <Link to={hero.buttonLink} className="block mx-auto mt-3 mb-4">
-          <button className="bg-black text-white font-semibold py-3 px-8 text-md">
+          <button className="bg-black text-white font-semibold py-3 px-4 text-md">
             {hero.buttonText}
           </button>
         </Link>
@@ -113,7 +113,7 @@ const IndexMobile: React.FC<ContentProps> = ({
           alt="Limited time offer"
           className="w-full h-auto"
         />
-        <div className="absolute bottom-0 left-0 text-white p-3 text-left w-full">
+        <div className="absolute bottom-0 left-0 text-white p-4 text-left w-full">
           <div className="flex items-baseline gap-3">
             <p className="text-4xl font-extrabold font-neue-plak tracking-wide">
               EXPIRES IN
@@ -124,7 +124,7 @@ const IndexMobile: React.FC<ContentProps> = ({
             Check it NOW. New deals dropping every 48 hours.
           </p>
           <Link to={limitedTime.buttonLink} className="mt-3 inline-block">
-            <button className="bg-white text-black font-regular py-4 px-8 hover:bg-gray-200 transition">
+            <button className="bg-white text-black font-regular py-2 px-8 hover:bg-gray-200 transition">
               {limitedTime.buttonText}
             </button>
           </Link>
@@ -132,10 +132,10 @@ const IndexMobile: React.FC<ContentProps> = ({
       </section>
 
       <section className="py-4 bg-white">
-        <h2 className="text-2xl font-bold mb-6 text-start whitespace-pre-line px-4">
+        <h2 className="text-2xl font-bold mb-6 text-start whitespace-pre-line px-3">
           {promotions.title}
         </h2>
-        <div className="flex overflow-x-auto gap-4 px-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex overflow-x-auto gap-4 px-3 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {promotions.items.map((promo: any, index: number) => (
             <Link
               to={promo.link}
@@ -145,14 +145,14 @@ const IndexMobile: React.FC<ContentProps> = ({
               <img
                 src={promo.img}
                 alt={`Promotion ${index + 1}`}
-                className="w-full h-auto object-cover rounded-lg shadow-md"
+                className="w-full h-auto object-cover  shadow-md"
               />
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="px-4 py-4">
+      <section className="">
         <img
           src={evenMoreForLess.mobileImage}
           alt="Even more for less"
@@ -167,8 +167,8 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      <section className="py-1 bg-white px-4">
-        <h2 className="text-3xl font-bold mb-6 text-center">
+      <section className="py-1 bg-white px-2">
+        <h2 className="text-3xl font-bold mb-2 text-center">
           {productCarousel.title}
         </h2>
         <div className="flex overflow-x-auto gap-4 mb-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
