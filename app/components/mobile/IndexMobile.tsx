@@ -51,9 +51,6 @@ const IndexMobile: React.FC<ContentProps> = ({
 
   return (
     <div className="bg-white text-black font-neue-plak">
-      {/* --- THIS SECTION IS UPDATED --- */}
-
-      {/* Section 1: Now only contains the video */}
       <section className="relative w-full aspect-square">
         <video
           autoPlay
@@ -67,46 +64,45 @@ const IndexMobile: React.FC<ContentProps> = ({
         </video>
       </section>
 
-      {/* Section 2: A new section for the text content, placed below the video */}
       <section className="bg-white text-start py-3 px-4">
         <h2 className="font-black text-3xl leading-tight">
           SHOP OUR
           <br />
           END OF SEASON SALE
         </h2>
-        <p className="text-lg mt-4 tracking-wider">{hero.secondarySubtitle}</p>
-        <Link to={hero.buttonLink} className="block mx-auto mt-6">
+        <p className="text-lg mt-1 tracking-wider">{hero.secondarySubtitle}</p>
+        <Link to={hero.buttonLink} className="block mx-auto mt-3 mb-4">
           <button className="bg-black text-white font-semibold py-3 px-8 text-md">
             {hero.buttonText}
           </button>
         </Link>
       </section>
 
-      {/* --- END OF UPDATE --- */}
-
-      <section
-        style={{ backgroundImage: `url(${limitedTime.mobile.productImage})` }}
-        className="relative bg-cover bg-center min-h-[0vh] flex flex-col justify-end"
-      >
-        <div className="bg-gray-200 text-black p-6">
-          <div className="border-2 border-red-600 p-2 text-center inline-block">
-            <span className="font-bold text-red-600 text-sm tracking-widest">
-              {limitedTime.expiryText}
-            </span>
+      <section className="relative">
+        <img
+          src={limitedTime.mobile.productImage}
+          alt="Limited time offer"
+          className="w-full h-auto"
+        />
+        <div className="absolute bottom-0 left-0 text-white p-3 text-left w-full">
+          <div className="flex items-baseline gap-3">
+            <p className="text-4xl font-extrabold font-neue-plak tracking-wide">
+              EXPIRES IN
+            </p>
+            <p className="font-bold font-neue-plak text-3xl ">{countdown}</p>
           </div>
-          <p className="font-bold text-4xl mt-3 tracking-widest">{countdown}</p>
-          <p className="text-xs mt-2">
-            Check in NOW. New deals dropping every 48 hours.
+          <p className="text-sm mt-1 font-neue-plak-regular">
+            Check it NOW. New deals dropping every 48 hours.
           </p>
-          <Link to={limitedTime.buttonLink}>
-            <button className="mt-6 bg-white text-black font-semibold py-3 w-full max-w-sm hover:bg-gray-300 transition">
+          <Link to={limitedTime.buttonLink} className="mt-3 inline-block">
+            <button className="bg-white text-black font-regular py-4 px-8 hover:bg-gray-200 transition">
               {limitedTime.buttonText}
             </button>
           </Link>
         </div>
       </section>
 
-      <section className="py-12 bg-white">
+      <section className="py-4 bg-white">
         <h2 className="text-2xl font-bold mb-6 text-start whitespace-pre-line px-4">
           {promotions.title}
         </h2>
@@ -127,31 +123,35 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      <section className="px-4 py-8">
+      <section className="px-4 py-4">
         <img
           src={evenMoreForLess.mobileImage}
           alt="Even more for less"
           className="w-full h-auto"
         />
-        <div className="text-center mt-6">
+        <div className="text-start mt-2">
           <Link to={evenMoreForLess.buttonLink} className="block">
-            <button className="bg-black text-white font-semibold py-3 px-12 text-sm">
+            <button className="bg-black text-white font-semibold py-4 px-8 text-sm">
               {evenMoreForLess.buttonText}
             </button>
           </Link>
         </div>
       </section>
 
+      {/* --- THIS SECTION HAS BEEN UPDATED --- */}
       <section className="py-1 bg-white px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">
           {productCarousel.title}
         </h2>
-        <div className="grid grid-cols-2 gap-4 mb-12">
+        <div className="flex overflow-x-auto gap-4 mb-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {productCarousel.items.map((product: any, index: number) => (
-            <ProductCard key={index} product={product} />
+            <div key={index} className="flex-shrink-0 w-10/12">
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </section>
+      {/* --- END OF UPDATE --- */}
     </div>
   );
 };
