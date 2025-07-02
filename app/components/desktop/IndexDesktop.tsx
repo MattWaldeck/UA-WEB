@@ -92,11 +92,13 @@ const IndexDesktop: React.FC<ContentProps> = ({
           <source src={hero.desktop.video} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
-        <div className="relative z-20 w-full px-16 pb-16">
-          <h2 className="font-black text-6xl leading-tight">
-            {hero.mainSubtitle}
+        <div className="relative z-20 w-full px-2 pb-8">
+          <h2 className="font-black text-6xl leading-none text-black">
+            END OF SEASON
+            <br />
+            SALE NOW LIVE
           </h2>
-          <p className="text-xl mt-2">{hero.secondarySubtitle}</p>
+          <p className="text-xl mt-2 text-black">{hero.secondarySubtitle}</p>
           <Link to={hero.buttonLink}>
             <button className="mt-6 bg-black text-white font-semibold py-3 px-10 text-md hover:bg-gray-800 transition">
               {hero.buttonText}
