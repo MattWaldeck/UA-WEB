@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 type ContentProps = {
   hero: any;
@@ -47,7 +47,36 @@ const IndexDesktop: React.FC<ContentProps> = ({
   evenMoreForLess,
   productCarousel,
 }) => {
-  const countdown = '16:54:29';
+  const [countdown, setCountdown] = useState('');
+
+  useEffect(() => {
+    const expiryDate = new Date();
+    expiryDate.setHours(expiryDate.getHours() + 16);
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = expiryDate.getTime() - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        setCountdown('00:00:00');
+      } else {
+        const hours = String(
+          Math.floor((distance / (1000 * 60 * 60)) % 24)
+        ).padStart(2, '0');
+        const minutes = String(
+          Math.floor((distance / (1000 * 60)) % 60)
+        ).padStart(2, '0');
+        const seconds = String(Math.floor((distance / 1000) % 60)).padStart(
+          2,
+          '0'
+        );
+        setCountdown(`${hours}:${minutes}:${seconds}`);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="bg-white text-black font-neue-plak">
@@ -62,9 +91,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
         >
           <source src={hero.desktop.video} type="video/mp4" />
         </video>
-
         <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
-
         <div className="relative z-20 w-full px-16 pb-16">
           <h2 className="font-black text-6xl leading-tight">
             {hero.mainSubtitle}
@@ -80,13 +107,12 @@ const IndexDesktop: React.FC<ContentProps> = ({
 
       <section
         style={{ backgroundImage: `url(${limitedTime.desktop.background})` }}
-        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px] max-w-[1400px]  mx-auto mt-8"
+        className="relative bg-cover bg-center text-white py-10 px-16 flex items-center min-h-[580px] max-w-[1400px] mx-auto mt-8"
       >
         <div>
           <div className="mt-52">
-            {' '}
             <div>
-              <span className="font-neue-plak font-bold text-4xl uppercase ">
+              <span className="font-neue-plak font-bold text-4xl uppercase">
                 {limitedTime.expiryText}
               </span>
               <span className="font-bold text-4xl ml-3 tracking-wide">
@@ -128,7 +154,7 @@ const IndexDesktop: React.FC<ContentProps> = ({
           alt="Even more for less"
           className="w-full h-auto"
         />
-        <div className="absolute inset-0 flex items-end justify-center px-24 mb-40 ">
+        <div className="absolute inset-0 flex items-end justify-center mb-40">
           <h2
             className="font-black text-9xl leading-none"
             dangerouslySetInnerHTML={{ __html: evenMoreForLess.title }}

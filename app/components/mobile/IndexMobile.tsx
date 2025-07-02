@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 type ContentProps = {
   hero: any;
@@ -47,7 +47,36 @@ const IndexMobile: React.FC<ContentProps> = ({
   evenMoreForLess,
   productCarousel,
 }) => {
-  const countdown = '16:54:29';
+  const [countdown, setCountdown] = useState('');
+
+  useEffect(() => {
+    const expiryDate = new Date();
+    expiryDate.setHours(expiryDate.getHours() + 16);
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = expiryDate.getTime() - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        setCountdown('00:00:00');
+      } else {
+        const hours = String(
+          Math.floor((distance / (1000 * 60 * 60)) % 24)
+        ).padStart(2, '0');
+        const minutes = String(
+          Math.floor((distance / (1000 * 60)) % 60)
+        ).padStart(2, '0');
+        const seconds = String(Math.floor((distance / 1000) % 60)).padStart(
+          2,
+          '0'
+        );
+        setCountdown(`${hours}:${minutes}:${seconds}`);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="bg-white text-black font-neue-plak">
@@ -89,7 +118,7 @@ const IndexMobile: React.FC<ContentProps> = ({
             <p className="text-4xl font-extrabold font-neue-plak tracking-wide">
               EXPIRES IN
             </p>
-            <p className="font-bold font-neue-plak text-3xl ">{countdown}</p>
+            <p className="font-bold font-neue-plak text-3xl">{countdown}</p>
           </div>
           <p className="text-sm mt-1 font-neue-plak-regular">
             Check it NOW. New deals dropping every 48 hours.
@@ -138,7 +167,6 @@ const IndexMobile: React.FC<ContentProps> = ({
         </div>
       </section>
 
-      {/* --- THIS SECTION HAS BEEN UPDATED --- */}
       <section className="py-1 bg-white px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">
           {productCarousel.title}
@@ -151,7 +179,6 @@ const IndexMobile: React.FC<ContentProps> = ({
           ))}
         </div>
       </section>
-      {/* --- END OF UPDATE --- */}
     </div>
   );
 };
