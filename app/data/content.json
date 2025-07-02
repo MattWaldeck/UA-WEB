@@ -57,7 +57,7 @@
     "title": "",
     "items": [
       {
-        "name": "UA Charged Assert 9 Men's",
+        "name": "",
         "img": "https://via.placeholder.com/400x400.png?text=Product",
         "price": "R 849.00",
         "originalPrice": "R 1049.00",
@@ -65,7 +65,7 @@
         "link": "/product/1"
       },
       {
-        "name": "UA Tech™ 2.0 Short Sleeve",
+        "name": "",
         "img": "https://via.placeholder.com/400x400.png?text=Product",
         "price": "R 549.00",
         "originalPrice": null,
@@ -73,7 +73,7 @@
         "link": "/product/2"
       },
       {
-        "name": "UA Rival Fleece Joggers",
+        "name": "",
         "img": "https://via.placeholder.com/400x400.png?text=Product",
         "price": "R 999.00",
         "originalPrice": null,
@@ -81,7 +81,7 @@
         "link": "/product/3"
       },
       {
-        "name": "Women's HeatGear® Armour",
+        "name": "",
         "img": "https://via.placeholder.com/400x400.png?text=Product",
         "price": "R 649.00",
         "originalPrice": "R 849.00",
